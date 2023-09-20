@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+  }
+
+@font-face {
+  font-family: 'Valorax';
+  src: url('assets/fonts/Valorax-lg25V.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'Stacker';
+src: url('assets/fonts/Stacker-jE03l.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'NoizeSportFreeVertionRegular';
+src: url('assets/fonts/NoizeSportFreeVertionRegular-MVwye.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Excluded';
+src: url('assets/fonts/Excluded-z8XrX.ttf') format('truetype');
+}

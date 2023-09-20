@@ -1,0 +1,26 @@
+#container {
+    background-color: #101010;
+    height: 200vh;
+}
+
+.landing {
+    height: 100vh;
+    display: flex;
+    // background-color: #202020;
+    background-image: url("./../../../assets/polygon-scatter-haikei.svg");
+    background-size: 100%;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.title {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    font-size: calc(60px + 0.390625vw)
+}
