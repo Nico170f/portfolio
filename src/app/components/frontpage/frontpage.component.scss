@@ -1,22 +1,126 @@
 #container {
     background-color: #101010;
-    height: 200vh;
+    // height: 100%;
+    width: 100%;
+    // overflow: hidden;
 }
 
-.landing {
+.background {
     height: 100vh;
-    display: flex;
-    // background-color: #202020;
+    // min-width: 1000px;
     background-image: url("./../../../assets/polygon-scatter-haikei.svg");
-    background-size: 100%;
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
+    background-size: 100% auto;
+    display: flex;
+}
 
+.hello-title {
+    font-size: calc(40px + 0.390625vw);
+    font-family: Excluded;
+}
+
+.name-animation {
+    animation: ani 4s infinite;
+}
+
+@keyframes ani{
+	10%{
+		color:white !important;
+		text-shadow:0px 0px 0px white,
+					0px 0px 10px white,
+					0px 0px 20px white,
+					0px 0px 30px white,
+					// 0px 0px 40px white,
+					// 0px 0px 50px white,
+					// 0px 0px 60px white;
+	}
+}
+
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+
+.flex-items:nth-child(1) {
+    margin: 20px;
+    color:white;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: center;
+    order: 0;
+}
+
+.flex-items:nth-child(2) {
+    margin: 20px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+.projects-section {
+    height: 40px;
+    color: white
+}
+
+.image-container {
+    width: 200px;
+    height: 250px;
+}
+
+.user-image {
+     width: 100%;
+     border: 5px solid #0066FF;
+     border-radius: 10px;
+    // height: auto;
+}
+
+
+
+
+/*
+
+#container {
+    background-color: #101010;
+    height: 200vh;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.section-one {
+    height: 100vh;
+    min-width: 1000px;
+    display: flex;
+    background-image: url("./../../../assets/polygon-scatter-haikei.svg");
+
+    background-size: 100% auto;
     justify-content: center;
     text-align: center;
-
-
 }
+
+
+.section-container {
+    width: 100%
+}
+
 
 .title {
     margin-top: auto;
@@ -24,3 +128,59 @@
     color: white;
     font-size: calc(60px + 0.390625vw)
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+.flex-items {
+    margin: 20px;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    // img {
+    //     border: 5px solid #0066FF;
+    //     border-radius: 7px;
+    // }
+}
+
+
+.user-image {
+    border: 5px solid #0066FF;
+    border-radius: 7px;
+    //width: calc(200px + 0.390625vw);
+    max-width: 40%;
+    height: auto;
+    // height: 250px;
+    // object-fit: cover;
+}
+
+
+.flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+*/
