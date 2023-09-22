@@ -13,9 +13,13 @@
     display: flex;
 }
 
-.hello-title {
+.title {
     font-size: calc(40px + 0.390625vw);
     font-family: Excluded;
+}
+
+.title-description {
+    color: rgb(172, 172, 172);
 }
 
 .name-animation {
@@ -37,19 +41,34 @@
 
 
 .flex-container {
-    width: 100%;
+    max-width: 40%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1400px) {
+  .flex-container {
+    max-width: 70%;
+  }
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .flex-container {
     flex-direction: column;
+    max-width: 80%;
+  }
+
+  .title, .title-description  {
+    align-content: center;
+    text-align: center;
   }
 }
 

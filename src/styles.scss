@@ -27,3 +27,29 @@ src: url('assets/fonts/NoizeSportFreeVertionRegular-MVwye.ttf') format('truetype
 font-family: 'Excluded';
 src: url('assets/fonts/Excluded-z8XrX.ttf') format('truetype');
 }
+
+.scroller {
+  width: 100%;
+  // height: 200px;
+  overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #55aa55;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #88dd88;
+}
