@@ -14,16 +14,20 @@
         </div>
 
         <div style="display: flex; flex-direction: column; justify-content: center">
-            <button mat-icon-button (click)="toggleDrawer()" class="sidenav-container">
+            <button mat-icon-button (click)="scrollTo(top)" class="sidenav-container">
                 <mat-icon style="color: white">person</mat-icon>
             </button>
 
-            <button mat-icon-button (click)="toggleDrawer()" class="sidenav-container">
-                <mat-icon style="color: white">person</mat-icon>
+            <button mat-icon-button (click)="scrollTo(recentProjects)" class="sidenav-container">
+                <mat-icon style="color: white">checklist_rtl</mat-icon>
             </button>
+            
+            <!--
+                lightbulb_outline
+            -->
 
-            <button mat-icon-button (click)="toggleDrawer()" class="sidenav-container">
-                <mat-icon style="color: white">person</mat-icon>
+            <button mat-icon-button (click)="scrollTo(footer)" class="sidenav-container">
+                <mat-icon style="color: white">mail</mat-icon>
             </button>
         </div>
 
@@ -36,7 +40,7 @@
     </button>
   </div>
 
-  <div class="background-one">
+  <div #top class="background-one">
     <div class="flex-container">
          <div class="flex-items"> 
               <h1 class="title">Hi. I'm, <span class="name-animation">Nicolai</span></h1>
@@ -53,98 +57,89 @@
               </div>
             </div>
         </div>
+
+        <div class="experience-section">
+            <img matTooltipPosition="above" matTooltip="Electron" src="../../../assets/electron.svg">
+            <img matTooltipPosition="above" matTooltip="TypeScript" src="../../../assets/typescript.svg">
+            <img matTooltipPosition="above" matTooltip="Angular" src="../../../assets/angular.svg">
+            <img matTooltipPosition="above" matTooltip="JavaScript" src="../../../assets/javascript.svg">
+            <img matTooltipPosition="above" matTooltip="C#" src="../../../assets/csharp.svg">
+            <img matTooltipPosition="above" matTooltip="HTML" src="../../../assets/html.svg">
+            <img matTooltipPosition="above" matTooltip="CSS" src="../../../assets/css.svg">
+            <img matTooltipPosition="above" matTooltip="MongoDB" src="../../../assets/mongodb.svg">
+            <img matTooltipPosition="above" matTooltip="MySQL" src="../../../assets/mysql.svg">
+            <img matTooltipPosition="above" matTooltip="Java" src="../../../assets/javalogo.svg">
+        </div>
   </div>
 
-  <div class="background-two">
+  <div #recentProjects class="background-two">
     <div class="projects-container">
-        <!--
-        <div style="width: 100%; height: 600px; background-color: rgba(0, 0, 0, 0.0);">
-            <h1 class="projects-title">Recent <span>Projects</span></h1>
-        </div>
-        -->
         <h1 class="projects-title">Recent <span class="light-bulb-effect">Projects</span></h1>
-
         <div class="project">
              <img class="project-logo" src="../../../assets/acc-logo.png">
-
             <div class="project-info">
-
                 <div class="project-header">
-
                     <h1 class="title">AFKCC</h1>
-
                     <div class="project-chips">
-
-                        <div class="chip ts">
-                            Typescript
-                        </div>
-                        
-                        <div class="chip node">
-                            NodeJS
-                        </div>
-
-                        <div class="chip electron">
-                            Electron
-                        </div>
+                        <div class="chip ts">Typescript</div>
+                        <div class="chip mongodb">MongoDB</div>
+                        <div class="chip electron">Electron</div>
+                        <div class="chip blank">Express</div>
+                        <div class="chip angular">Angular</div>
                     </div>
                 </div>
-
                 <p class="project-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. 
-                Lorem ipsum dolor sit amet, consectetur adipisci. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipisci. 
                 </p>
             </div>
-            
         </div>
 
 
-
         <div class="project">
-             <img class="project-logo" src="../../../assets/acc-logo.png">
-
+            <img class="project-logo" src="../../../assets/discord.svg">
             <div class="project-info">
-
                 <div class="project-header">
-
-                    <h1 class="title">AFKCC</h1>
-
+                    <h1 class="title">Factions Bot</h1>
                     <div class="project-chips">
-
-                        <div class="chip ts">
-                            Typescript
-                        </div>
-                        
-                        <div class="chip node">
-                            NodeJS
-                        </div>
-
-                        <div class="chip electron">
-                            Electron
-                        </div>
+                        <div class="chip js">JavaScript</div>
+                        <div class="chip mongodb">MongoDB</div>
+                        <div class="chip mysql">MySQL</div>
                     </div>
                 </div>
-
                 <p class="project-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. 
-                Lorem ipsum dolor sit amet, consectetur adipisci. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. 
                 </p>
             </div>
-            
         </div>
 
+
+        <div class="project">
+             <img class="project-logo" src="../../../assets/java.svg">
+            <div class="project-info">
+                <div class="project-header">
+                    <h1 class="title">Minecraft Core</h1>
+                    <div class="project-chips">
+                        <div class="chip java">Java</div>
+                        <div class="chip mysql">MySQL</div>
+                        <div class="chip blank">Bukkit</div>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipisci. 
+                </p>
+            </div>
+        </div>
     </div>
   </div>
 
-  <div class="footer-section">
+  
+  <div #footer class="footer-section">
     <div class="column">
         <h1>Contact</h1>
         <div class="group" matTooltip="Mail" matTooltipPosition="above" (click)="copy('4Free@valoks.com')">
             <mat-icon>mail</mat-icon> 
             <p>4Free@valoks.com</p>
         </div>
-
         <div class="group" matTooltip="Discord" matTooltipPosition="above" (click)="copy('4free')">
             <mat-icon>discord</mat-icon>
             <p>4free</p>
@@ -157,7 +152,6 @@
             <mat-icon svgIcon="linkedin"></mat-icon>
             <p style="margin-top: 4px;">Click me</p>
         </div>
-
         <div class="group" matTooltip="Github" matTooltipPosition="above" (click)="openLink('https://github.com/Nico170f')">
             <mat-icon svgIcon="github"></mat-icon>
             <p>Click me</p>

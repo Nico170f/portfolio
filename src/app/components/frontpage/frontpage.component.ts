@@ -49,6 +49,9 @@ export class FrontpageComponent {
     }, 200);
   }
 
+  scrollTo(target: HTMLDivElement) {
+    target.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
 
   openLink(text: string) {
     window.open(text, '_blank');
