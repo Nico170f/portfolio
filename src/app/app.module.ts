@@ -6,6 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
+import { MatChipsModule } from '@angular/material/chips';
+
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { FrontpageComponent } from './components/frontpage/frontpage.component';
@@ -21,9 +27,21 @@ import { FrontpageComponent } from './components/frontpage/frontpage.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatChipsModule
   ],
-  providers: [],
+  providers: [{
+    provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: {
+      showDelay: 0,
+      hideDelay: 0,
+      touchendHideDelay: 1500,
+      disableTooltipInteractivity: true
+    }
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
