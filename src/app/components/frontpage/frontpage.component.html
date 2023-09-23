@@ -140,12 +140,12 @@
   <div class="footer-section">
     <div class="column">
         <h1>Contact</h1>
-        <div class="group">
+        <div class="group" matTooltip="Mail" matTooltipPosition="above" (click)="copy('4Free@valoks.com')">
             <mat-icon>mail</mat-icon> 
             <p>4Free@valoks.com</p>
         </div>
 
-        <div class="group">
+        <div class="group" matTooltip="Discord" matTooltipPosition="above" (click)="copy('4free')">
             <mat-icon>discord</mat-icon>
             <p>4free</p>
         </div>
@@ -153,16 +153,13 @@
 
     <div class="column">
         <h1>Links</h1>
-        <div class="group">
-            <mat-icon>github-box</mat-icon> 
-            <p>Click me</p>
+        <div class="group" matTooltip="LinkedIn" matTooltipPosition="above" (click)="openLink('https://www.linkedin.com/in/nicolai-hansen-332004276/')">
+            <mat-icon svgIcon="linkedin"></mat-icon>
+            <p style="margin-top: 4px;">Click me</p>
         </div>
 
-        <div class="group">
-            <mat-icon>github-circle</mat-icon>
-            <ng-md-icon>
-                
-            </ng-md-icon>
+        <div class="group" matTooltip="Github" matTooltipPosition="above" (click)="openLink('https://github.com/Nico170f')">
+            <mat-icon svgIcon="github"></mat-icon>
             <p>Click me</p>
         </div>
     </div>

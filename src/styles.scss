@@ -1,12 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  // overflow: hidden;
- }
-
 @font-face {
     font-family: 'Poppins';
     src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
@@ -32,9 +24,21 @@ font-family: 'Excluded';
 src: url('assets/fonts/Excluded-z8XrX.ttf') format('truetype');
 }
 
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  // overflow: hidden;
+ }
+
+* {
+  font-family: Poppins;
+}
+
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
@@ -42,7 +46,6 @@ src: url('assets/fonts/Excluded-z8XrX.ttf') format('truetype');
   scrollbar-width: none;  /* Firefox */
   overflow-y: scroll;
 }
-
 
 md-sidenav.md-sidenav-opened, md-sidenav.md-sidenav-opening{
   box-shadow: 0 0 0 0 !important;
