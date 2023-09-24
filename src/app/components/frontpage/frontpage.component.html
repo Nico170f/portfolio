@@ -22,10 +22,6 @@
                 <mat-icon style="color: white">checklist_rtl</mat-icon>
             </button>
             
-            <!--
-                lightbulb_outline
-            -->
-
             <button mat-icon-button (click)="scrollTo(footer)" class="sidenav-container">
                 <mat-icon style="color: white">mail</mat-icon>
             </button>
@@ -59,74 +55,25 @@
         </div>
 
         <div class="experience-section">
-            <img matTooltipPosition="above" matTooltip="Electron" src="../../../assets/electron.svg">
-            <img matTooltipPosition="above" matTooltip="TypeScript" src="../../../assets/typescript.svg">
-            <img matTooltipPosition="above" matTooltip="Angular" src="../../../assets/angular.svg">
-            <img matTooltipPosition="above" matTooltip="JavaScript" src="../../../assets/javascript.svg">
-            <img matTooltipPosition="above" matTooltip="C#" src="../../../assets/csharp.svg">
-            <img matTooltipPosition="above" matTooltip="HTML" src="../../../assets/html.svg">
-            <img matTooltipPosition="above" matTooltip="CSS" src="../../../assets/css.svg">
-            <img matTooltipPosition="above" matTooltip="MongoDB" src="../../../assets/mongodb.svg">
-            <img matTooltipPosition="above" matTooltip="MySQL" src="../../../assets/mysql.svg">
-            <img matTooltipPosition="above" matTooltip="Java" src="../../../assets/javalogo.svg">
+            <img *ngFor="let ex of experience" matTooltipPosition="above" [matTooltip]="ex.tooltip" [src]="ex.icon">
         </div>
   </div>
 
   <div #recentProjects class="background-two">
     <div class="projects-container">
         <h1 class="projects-title">Recent <span class="light-bulb-effect">Projects</span></h1>
-        <div class="project">
-             <img class="project-logo" src="../../../assets/acc-logo.png">
+        <div *ngFor="let project of projects" class="project">
+             <img class="project-logo" [src]="project.logo">
             <div class="project-info">
                 <div class="project-header">
-                    <h1 class="title">AFKCC</h1>
+                    <h1 class="title">{{project.title}}</h1>
                     <div class="project-chips">
-                        <div class="chip ts">Typescript</div>
-                        <div class="chip mongodb">MongoDB</div>
-                        <div class="chip electron">Electron</div>
-                        <div class="chip blank">Express</div>
-                        <div class="chip angular">Angular</div>
+                        <div *ngFor="let chip of project.chips" class="chip {{chip}}">
+                            {{chip}}
+                        </div>
                     </div>
                 </div>
-                <p class="project-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipisci. 
-                </p>
-            </div>
-        </div>
-
-
-        <div class="project">
-            <img class="project-logo" src="../../../assets/discord.svg">
-            <div class="project-info">
-                <div class="project-header">
-                    <h1 class="title">Factions Bot</h1>
-                    <div class="project-chips">
-                        <div class="chip js">JavaScript</div>
-                        <div class="chip mongodb">MongoDB</div>
-                        <div class="chip mysql">MySQL</div>
-                    </div>
-                </div>
-                <p class="project-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. 
-                </p>
-            </div>
-        </div>
-
-
-        <div class="project">
-             <img class="project-logo" src="../../../assets/java.svg">
-            <div class="project-info">
-                <div class="project-header">
-                    <h1 class="title">Minecraft Core</h1>
-                    <div class="project-chips">
-                        <div class="chip java">Java</div>
-                        <div class="chip mysql">MySQL</div>
-                        <div class="chip blank">Bukkit</div>
-                    </div>
-                </div>
-                <p class="project-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipisci. 
-                </p>
+                <p class="project-description">{{project.desc}}</p>
             </div>
         </div>
     </div>
