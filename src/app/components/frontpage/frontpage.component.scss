@@ -261,13 +261,18 @@
 
     .project-description {
         color: grey;
-        text-overflow:ellipsis;
-        margin-bottom: 0px;
+        // text-overflow:ellipsis;
+        // margin-bottom: 0px;
+
+        overflow: hidden;
+        white-space: nowarp;
+        text-overflow: ellipsis;
+        display: block;
     }
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 760px) {
     .project {
         .title {
             margin-bottom: 10px;
@@ -276,13 +281,17 @@
         .project-header {
             flex-direction: column;
             margin-bottom: 0px;
+            // flex-wrap: nowrap;
         }
 
-        .project-description {
-            display: none;
-        }
+        // .project-description {
+        //     display: none;
+        // }
 
         .project-chips {
+            // display: none;
+            overflow: hidden;
+
             align-self: center;
             flex-wrap: wrap;
             justify-content: center;
@@ -304,13 +313,18 @@
         height: 80%;
 
         .project-logo {
+            display: none;
             margin: 0px;
             width: 140px;
         }
 
-        .project-header {
-            display: none;
+        .project-description {
+            text-align: center;
         }
+
+        // .project-header {
+        //     display: none;
+        // }
     }
 }
 

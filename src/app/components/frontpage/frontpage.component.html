@@ -62,20 +62,46 @@
   <div #recentProjects class="background-two">
     <div class="projects-container">
         <h1 class="projects-title">Recent <span class="light-bulb-effect">Projects</span></h1>
-        <div *ngFor="let project of projects" class="project">
-             <img class="project-logo" [src]="project.logo">
-            <div class="project-info">
-                <div class="project-header">
-                    <h1 class="title">{{project.title}}</h1>
-                    <div class="project-chips">
-                        <div *ngFor="let chip of project.chips" class="chip {{chip}}">
-                            {{chip}}
+        <li>Click to see more</li>
+        <!--
+            <div *ngFor="let project of projects" class="project">
+                 <img class="project-logo" [src]="project.logo">
+                <div class="project-info">
+                    <div class="project-header">
+                        <h1 class="title">{{project.title}}</h1>
+                        <div class="project-chips">
+                            <div *ngFor="let chip of project.chips" class="chip {{chip}}">
+                                {{chip}}
+                            </div>
                         </div>
                     </div>
+    
+                    <h1 style="margin: 0px; margin-top: -10px;color: grey;">Under title</h1>
+    
+                    <p class="project-description">{{project.desc}}</p>
                 </div>
-                <p class="project-description">{{project.desc}}</p>
             </div>
-        </div>
+
+        -->
+
+                <div *ngFor="let project of projects" class="project">
+                 <img class="project-logo" [src]="project.logo">
+                <div class="project-info">
+                    <div class="project-header">
+                        <h1 class="title">{{project.title}}</h1>
+                        <div class="project-chips">
+                            <div *ngFor="let chip of project.chips" class="chip {{chip}}">
+                                {{chip}}
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-description">
+                        {{project.desc}}
+                    </div>
+
+                </div>
+            </div>
     </div>
   </div>
 

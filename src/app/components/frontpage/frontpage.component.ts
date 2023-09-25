@@ -53,7 +53,7 @@ const projects = [
     logo: '../../../assets/acc-logo.png',
     title: 'AFKCC',
     chips: ['Typescript', 'MongoDB', 'Electron', 'Express', 'Angular'],
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipisci.'
+    desc: 'A free and easy to use AFK manager application. We\'re developing a paid web version.'
   },
   {
     logo: '../../../assets/discord.svg',
