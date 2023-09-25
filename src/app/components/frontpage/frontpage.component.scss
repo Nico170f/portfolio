@@ -29,12 +29,6 @@
     display: flex;
 }
 
-@media (max-width: 600px) {
-    .sidebar-toggle, .sidenav {
-        display: none;
-    }
-}
-
 .background-one {
     height: min(100% - 4rem);
     min-height: 100vh;
@@ -80,12 +74,6 @@
     }
 }
 
-@media (max-width: 750px) {
-    .experience-section {
-        margin-bottom: 100px;
-    }
-}
-
 .flex-container {
     max-width: 40%;
     display: flex;
@@ -99,24 +87,7 @@
     margin-bottom: 120px;
 }
 
-@media (max-width: 1400px) {
-  .flex-container {
-    max-width: 70%;
-  }
-}
 
-
-@media (max-width: 900px) {
-  .flex-container {
-    flex-direction: column;
-    max-width: 80%;
-  }
-
-  .title, .title-description  {
-    align-content: center;
-    text-align: center;
-  }
-}
 
 
 .flex-items:nth-child(1) {
@@ -147,17 +118,30 @@
     margin-bottom: 175px;
 }
 
+@media (max-width: 300px) {
+    .projects-container {
+        width: 95%;
+    }
+}
+
 .projects-title {
     color: white;
     font-family: Poppins;
     font-weight: 600;
     font-size: 32px;
     margin-top: 100px;
-    margin-bottom: 40px;
-
+    margin-bottom: 5px; 
+    
     span {
         color: white;
     }
+}
+
+.click-to-see-more {
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    list-style-type: "- ";
 }
 
 .light-bulb-effect:hover {
@@ -201,6 +185,7 @@
     .project-header {
         flex-direction: row;
         display: flex;
+        flex-wrap: nowrap;
         margin-bottom: 10px;
     }
 
@@ -211,13 +196,21 @@
         font-size: 26px;
         margin-right: 10px;
         margin-bottom: 0px;
-        text-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .tiny-logo {
+        margin-right: 10px;
+        display: none;
     }
 
     .project-chips {
         flex-grow: 1;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        overflow-y: hidden;
+        height: 29px;
 
         .chip {
             width: fit-content;
@@ -261,70 +254,10 @@
 
     .project-description {
         color: grey;
-        // text-overflow:ellipsis;
-        // margin-bottom: 0px;
-
         overflow: hidden;
         white-space: nowarp;
         text-overflow: ellipsis;
         display: block;
-    }
-}
-
-
-@media (max-width: 760px) {
-    .project {
-        .title {
-            margin-bottom: 10px;
-        }
-
-        .project-header {
-            flex-direction: column;
-            margin-bottom: 0px;
-            // flex-wrap: nowrap;
-        }
-
-        // .project-description {
-        //     display: none;
-        // }
-
-        .project-chips {
-            // display: none;
-            overflow: hidden;
-
-            align-self: center;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .chip {
-                margin-bottom: 5px;
-                align-self: center;
-            }
-        }
-    }
-
-}
-
-
-@media (max-width: 350px) {
-    .project {
-        flex-direction: column;
-        align-items: center;
-        height: 80%;
-
-        .project-logo {
-            display: none;
-            margin: 0px;
-            width: 140px;
-        }
-
-        .project-description {
-            text-align: center;
-        }
-
-        // .project-header {
-        //     display: none;
-        // }
     }
 }
 
@@ -378,17 +311,6 @@
     }
 }
 
-@media (max-width: 500px) {
-    .footer-section {
-        flex-direction: column;
-        margin-top: 0px;
-
-        .column {
-            margin-top: 30px;
-        }
-    }
-}
-
 
 .image-container {
     width: 200px;
@@ -412,6 +334,69 @@
 	}
 }
 
+
+@media (max-width: 1400px) {
+  .flex-container {
+    max-width: 70%;
+  }
+
+  .experience-section {
+    margin-bottom: 100px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+    max-width: 80%;
+  }
+
+  .title, .title-description  {
+    align-content: center;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 760px) {
+    .project {
+        .title {
+            margin-bottom: 10px;
+        }
+
+        .project-header {
+            margin-bottom: 0px;
+        }
+
+
+        .project-chips {
+            overflow: hidden;
+            align-self: center;
+
+            .chip {
+                margin-bottom: 5px;
+                align-self: center;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .experience-section {
+        margin-bottom: 100px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .sidebar-toggle, .sidenav {
+        display: none;
+    }
+}
+
+
 @media (max-width: 550px) {
     .experience-section {
         margin-bottom: 130px;
@@ -420,4 +405,56 @@
     .flex-container {
         margin-bottom: 20px;
     }
+
+    .project {
+    // .project:nth-of-type(3) {
+        .project-chips {
+            // Remove chips is width is too slim
+            display: none;
+        }
+
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-section {
+        flex-direction: column;
+        margin-top: 0px;
+
+        .column {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .project {
+        height: 80%;
+
+        .title {
+            margin: 0px;
+        }
+
+        .project-logo {
+            display: none;
+        }
+
+        .tiny-logo {
+            display: block;
+         }
+
+        .project-description {
+            text-align: center;
+        }
+
+         .project-header {
+             align-self: center;
+             margin-bottom: 10px;
+         }
+    }
+
+
+
 }

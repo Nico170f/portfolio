@@ -62,7 +62,7 @@
   <div #recentProjects class="background-two">
     <div class="projects-container">
         <h1 class="projects-title">Recent <span class="light-bulb-effect">Projects</span></h1>
-        <li>Click to see more</li>
+        <li class="click-to-see-more">Click a project to see more</li>
         <!--
             <div *ngFor="let project of projects" class="project">
                  <img class="project-logo" [src]="project.logo">
@@ -88,6 +88,9 @@
                  <img class="project-logo" [src]="project.logo">
                 <div class="project-info">
                     <div class="project-header">
+
+                        <img class="tiny-logo" [src]="project.logo">
+
                         <h1 class="title">{{project.title}}</h1>
                         <div class="project-chips">
                             <div *ngFor="let chip of project.chips" class="chip {{chip}}">

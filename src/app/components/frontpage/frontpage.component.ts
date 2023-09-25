@@ -50,7 +50,7 @@ const experience = [
 
 const projects = [
   {
-    logo: '../../../assets/acc-logo.png',
+    logo: '../../../assets/acc-logo2.svg',
     title: 'AFKCC',
     chips: ['Typescript', 'MongoDB', 'Electron', 'Express', 'Angular'],
     desc: 'A free and easy to use AFK manager application. We\'re developing a paid web version.'
@@ -63,7 +63,7 @@ const projects = [
   },
   {
     logo: '../../../assets/java.svg',
-    title: 'Minecraft Plugin Core',
+    title: 'SkullCore',
     chips: ['Java', 'MySQL', 'Bukkit'],
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipisci.'
   }
