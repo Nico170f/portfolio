@@ -15,16 +15,16 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { FrontpageComponent } from './components/frontpage/frontpage.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
+    SidebarComponent,
     FooterComponent,
-    FrontpageComponent
+    LandingComponent
   ],
   imports: [
     BrowserModule,
