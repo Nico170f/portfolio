@@ -1,0 +1,25 @@
+.sidenav {
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.0);
+    width: 110px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none !important;
+}
+
+.sidenav-container {
+    justify-self: center;
+    display: flex;
+}
+
+.sidebar-toggle {
+    position:fixed;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    width: 50px;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

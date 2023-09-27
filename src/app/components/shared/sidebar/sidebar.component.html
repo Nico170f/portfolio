@@ -1,0 +1,31 @@
+<mat-drawer #drawer has class="sidenav" mode="over" position="end" [opened]="showSidenav">
+    <div style="display: flex; width: 100%; height: 100%;">
+
+        <div style="display: flex; margin-top: auto; margin-bottom: auto;">
+            <button mat-icon-button (click)="toggleDrawer()" class="sidenav-container">
+                <mat-icon style="color: grey">keyboard_double_arrow_right</mat-icon>
+            </button>
+        </div>
+
+        <div style="display: flex; flex-direction: column; justify-content: center">
+            <button mat-icon-button (click)="scrollTo('top-section')" class="sidenav-container">
+                <mat-icon style="color: white">person</mat-icon>
+            </button>
+
+            <button mat-icon-button (click)="scrollTo('recent-section')" class="sidenav-container">
+                <mat-icon style="color: white">checklist_rtl</mat-icon>
+            </button>
+
+            <button mat-icon-button (click)="scrollTo('footer-section')" class="sidenav-container">
+                <mat-icon style="color: white">mail</mat-icon>
+            </button>
+        </div>
+
+    </div>
+</mat-drawer>
+
+<div class="sidebar-toggle" *ngIf="showSidenavbutton">
+    <button mat-icon-button (click)="toggleDrawer()">
+        <mat-icon @fade style="color: white">keyboard_double_arrow_left</mat-icon>
+    </button>
+</div>
