@@ -18,13 +18,15 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { AfkccComponent } from './components/projects/afkcc/afkcc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     FooterComponent,
-    LandingComponent
+    LandingComponent,
+    AfkccComponent
   ],
   imports: [
     BrowserModule,
