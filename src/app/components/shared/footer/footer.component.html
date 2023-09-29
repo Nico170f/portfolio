@@ -1,8 +1,8 @@
-  <div #footer class="footer-section">
+<div class="footer-section">
     <div class="column">
         <h1>Contact</h1>
         <div class="group" matTooltip="Mail" matTooltipPosition="above" (click)="copy('4Free@valoks.com')">
-            <mat-icon>mail</mat-icon> 
+            <mat-icon>mail</mat-icon>
             <p>4Free@valoks.com</p>
         </div>
         <div class="group" matTooltip="Discord" matTooltipPosition="above" (click)="copy('4free')">
@@ -13,15 +13,25 @@
 
     <div class="column">
         <h1>Links</h1>
-        <div class="group" matTooltip="Click me" matTooltipPosition="above" (click)="openLink('https://www.linkedin.com/in/nicolai-hansen-332004276/')">
+        <div class="group" matTooltip="Click me" matTooltipPosition="above"
+            (click)="openLink('https://www.linkedin.com/in/nicolai-hansen-332004276/')">
             <mat-icon svgIcon="linkedin"></mat-icon>
             <p style="margin-top: 4px;">LinkedIn</p>
         </div>
-        <div class="group" matTooltip="Click me" matTooltipPosition="above" (click)="openLink('https://github.com/Nico170f')">
+        <div class="group" matTooltip="Click me" matTooltipPosition="above"
+            (click)="openLink('https://github.com/Nico170f')">
             <mat-icon svgIcon="github"></mat-icon>
             <p>Github</p>
         </div>
     </div>
-  </div>
 
-  
+</div>
+
+<div class="made-with-container">
+    <div class="made-with">
+        <p class>
+            Portfolio made with
+        </p>
+        <mat-icon svgIcon="angular"></mat-icon>
+    </div>
+</div>

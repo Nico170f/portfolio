@@ -34,16 +34,39 @@
 
             p {
                 color: #404040;
-                font-family: Poppins;
                 margin-top: 2px;
                 font-weight: 900;
             }
-            
         }
 
         .group:hover {
             cursor: pointer;
         }
+    }
+}
+
+.made-with-container {
+    display: flex; 
+    justify-content: center;
+}
+
+.made-with {
+    display: inherit;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    p {
+        color: #404040;
+        margin-bottom: 0px;
+        font-weight: 900;
+    }
+
+    mat-icon {
+        color: #303030;
+        margin-left: 4px;
+        filter: grayscale(100%);
     }
 }
 
