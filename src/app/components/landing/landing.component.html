@@ -31,7 +31,7 @@
         <div class="projects-container">
             <h1 class="projects-title">Recent <span class="light-bulb-effect">Projects</span></h1>
             <li class="click-to-see-more">Click a project to see more</li>
-            <div *ngFor="let project of projects" class="project">
+            <div *ngFor="let project of projects" class="project" (click)="navigateTo([project.routerlink])">
                 <img class="project-logo" [src]="project.logo">
                 <div class="project-info">
                     <div class="project-header">
