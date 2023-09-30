@@ -4,8 +4,22 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Clipboard } from '@angular/cdk/clipboard';
+import { Router } from '@angular/router';
 
-const experience = [
+interface Project {
+  logo: string;
+  title: string;
+  routerlink: string;
+  chips: string[];
+  desc: string;
+}
+
+interface Experience {
+  tooltip: string;
+  icon: string;
+}
+
+const experience: Experience[] = [
   {
     tooltip: 'Electron',
     icon: '../../../assets/electron.svg'
@@ -49,22 +63,26 @@ const experience = [
 ];
 
 
-const projects = [
+
+const projects: Project[] = [
   {
     logo: '../../../assets/acc-logo2.svg',
     title: 'AFKCC',
+    routerlink: 'afkconsoleclient',
     chips: ['Typescript', 'MongoDB', 'Electron', 'Express', 'Angular'],
     desc: 'The AFK Console Client is a free, widely-used tool with over 5.000 users and 90.000+ launches. Seamlessly connect tons of accounts while using significantly less resources.'
   },
   {
     logo: '../../../assets/discord.svg',
     title: 'Factions Bot',
+    routerlink: 'skullwars-discordbot',
     chips: ['JavaScript', 'MongoDB', 'MySQL'],
     desc: 'The SkullWars Discord bot handled moderation and tickets, performed image manipulation to visualize in-game data, and much more.'
   },
   {
     logo: '../../../assets/java.svg',
     title: 'SkullCore',
+    routerlink: 'skullwars-core',
     chips: ['Java', 'MySQL', 'Bukkit'],
     desc: '"All in one" plugin created for SkullWars. SkullCore kept an eye on chat, improved the gameplay experience, and provided a wide range of QoL features.'
   }
@@ -91,7 +109,8 @@ export class LandingComponent {
     icon: MatIconRegistry,
     sanitizer: DomSanitizer,
     private _snackBar: MatSnackBar,
-    private clipboard: Clipboard
+    private clipboard: Clipboard,
+    public router: Router,
   ) {
     icon.addSvgIconLiteral('github', sanitizer.bypassSecurityTrustHtml(GITHUB_ICON));
     icon.addSvgIconLiteral('linkedin', sanitizer.bypassSecurityTrustHtml(LINKEDIN_ICON));
@@ -115,14 +134,18 @@ export class LandingComponent {
   }
 
 
-  setImage() {
-    this.user_image = '../../../assets/selfie2.gif';
-    console.log('entered');
+  navigateTo(url: string[]): void {
+    // this.router.navigate(url);
+    // window.scrollTo(0, 0);
   }
 
-  resetImage() {
-    this.user_image = '../../../assets/selfie.jpg';
-    console.log('left');
-  };
+  // ! setImage() {
+  // !   this.user_image = '../../../assets/selfie2.gif';
+  // !   console.log('entered');
+  // ! }
 
+  // ! resetImage() {
+  // !   this.user_image = '../../../assets/selfie.jpg';
+  // !   console.log('left');
+  // ! };
 }
