@@ -10,11 +10,13 @@ const routes: Routes = [
   // },
   {
     path: 'afkconsoleclient',
-    component: AfkccComponent
+    component: AfkccComponent,
+    data: { animation: 'Article' }
   },
   {
     path: '**',
-    component: LandingComponent
+    component: LandingComponent,
+    data: { animation: 'Home' }
   }
 ];
 
