@@ -37,7 +37,7 @@ const experience: Experience[] = [
     icon: '../../../assets/javascript.svg'
   },
   {
-    tooltip: 'c#',
+    tooltip: 'C#',
     icon: '../../../assets/csharp.svg'
   },
   {
@@ -135,7 +135,7 @@ export class LandingComponent {
 
 
   navigateTo(url: string[]): void {
-    // this.router.navigate(url);
+    this.router.navigate(url);
     // window.scrollTo(0, 0);
   }
 
