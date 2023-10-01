@@ -19,6 +19,7 @@ import { SidebarComponent } from './components/shared/sidebar/sidebar.component'
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { AfkccComponent } from './components/projects/afkcc/afkcc.component';
+import { BackComponent } from './components/shared/back/back.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AfkccComponent } from './components/projects/afkcc/afkcc.component';
     SidebarComponent,
     FooterComponent,
     LandingComponent,
-    AfkccComponent
+    AfkccComponent,
+    BackComponent
   ],
   imports: [
     BrowserModule,
