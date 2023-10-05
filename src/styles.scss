@@ -24,6 +24,16 @@ font-family: 'Excluded';
 src: url('assets/fonts/Excluded-z8XrX.ttf') format('truetype');
 }
 
+@font-face {
+font-family: 'Test';
+src: url('assets/fonts/Gabarito[wght].ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Mona';
+src: url('assets/fonts/Mona-Sans.ttf') format('truetype');
+}
+
 html, body { height: 100%; }
 body { 
   margin: 0; 
