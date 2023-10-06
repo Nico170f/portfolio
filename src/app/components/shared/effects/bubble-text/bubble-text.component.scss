@@ -1,0 +1,152 @@
+.hoverText {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+  font-family: Mona;
+
+  transition:
+    0.25s font-weight,
+    0.25s color;
+}
+.show-nonhover {
+  display: none;
+  line-height: 2rem;
+}
+
+
+@media (max-width: 600px) {
+.hide-hovertext {
+  display: none;
+}
+
+.show-nonhover {
+  display: block;
+}
+}
+
+@media (max-width: 400px) {
+    .hoverText {
+      font-size: 1.5rem;
+    }
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  color: #0066FF;
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+  font-weight: 750;
+  color: #0066FF90;
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 600;
+  color: #0066FF80;
+}
+
+.hoverText:hover + .hoverText + .hoverText + .hoverText {
+  font-weight: 600;
+  color: #0066FF70;
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 750;
+  color: #0066FF90;
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 600;
+  color: #0066FF80;
+}
+
+ .hoverText:has(+ .hoverText + .hoverText + .hoverText:hover) {
+   font-weight: 600;
+   color: #0066FF70;
+ }
+
+
+ /*
+
+
+.hoverText:hover {
+  font-weight: 900;
+  color: #ccf9ff;
+  //font-size: 2.2rem;
+}
+
+// To the right
+.hoverText:hover + .hoverText {
+  font-weight: 750;
+  color: #7ce8ff;
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 600;
+  color: #55d0ff;
+}
+
+.hoverText:hover + .hoverText + .hoverText + .hoverText {
+  font-weight: 600;
+  color: #00acdf;
+}
+
+// To the left
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 750;
+  color: #7ce8ff;
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 600;
+  color: #55d0ff;
+}
+
+ .hoverText:has(+ .hoverText + .hoverText + .hoverText:hover) {
+   font-weight: 600;
+   color: #00acdf;
+ }
+*/
+
+
+
+ // TO BLUE
+ /*
+ .hoverText:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+}
+
+// To the right
+.hoverText:hover + .hoverText {
+  font-weight: 750;
+  color: rgb(199, 210, 254);
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 600;
+  color: rgb(165, 183, 255);
+}
+
+.hoverText:hover + .hoverText + .hoverText + .hoverText {
+  font-weight: 600;
+  color: rgb(125, 151, 255);
+}
+
+// To the left
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 750;
+  color: rgb(199, 210, 254);
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 600;
+  color: rgb(165, 183, 255);
+}
+
+ .hoverText:has(+ .hoverText + .hoverText + .hoverText:hover) {
+   font-weight: 600;
+  color: rgb(125, 151, 255);
+ }
+*/
