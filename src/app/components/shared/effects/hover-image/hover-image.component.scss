@@ -1,0 +1,22 @@
+.avatar {
+  min-height: 150px;
+  overflow: hidden;
+  filter: drop-shadow(5px 15px 10px rgb(0 0 0 / 0.6));
+  transform: translatey(0px);
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+  filter: drop-shadow(5px 15px 5px rgb(0 0 0 / 0.6));
+    transform: translatey(0px);
+  }
+  50% {
+  filter: drop-shadow(15px 15px 5px rgb(0 0 0 / 0.2));
+    transform: translatey(-20px);
+  }
+  100% {
+  filter: drop-shadow(5px 15px 5px rgb(0 0 0 / 0.6));
+    transform: translatey(0px);
+  }
+}
