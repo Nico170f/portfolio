@@ -8,6 +8,7 @@ const routes: Routes = [
   //   path: '',
   //   component: LandingComponent
   // },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   {
     path: 'afkconsoleclient',
     component: AfkccComponent,
