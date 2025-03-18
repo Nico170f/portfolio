@@ -1,0 +1,39 @@
+<div class="footer-section">
+    <div class="column">
+        <h1>Contact</h1>
+        <div class="group" matTooltip="Mail" matTooltipPosition="above" (click)="copy(email)"
+            (keyup.enter)="copy(email)" tabindex="0" role="button">
+            <mat-icon>mail</mat-icon>
+            <p>{{email}}</p>
+        </div>
+        <div class="group" matTooltip="Discord" matTooltipPosition="above" (click)="copy('4free')"
+            (keyup.enter)="copy('4free')" tabindex="0" role="button">
+            <mat-icon>discord</mat-icon>
+            <p>4free</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <h1>Links</h1>
+        <div class="group" matTooltip="Click me" matTooltipPosition="above" (click)="openLink(linkedinLink)"
+            (keyup.enter)="openLink(linkedinLink)" tabindex="0" role="button">
+            <mat-icon svgIcon="linkedin"></mat-icon>
+            <p style="margin-top: 4px;">LinkedIn</p>
+        </div>
+        <div class="group" matTooltip="Click me" matTooltipPosition="above" (click)="openLink(githubProfileLink)"
+            (keyup.enter)="openLink(githubProfileLink)" tabindex="0" role="button">
+            <mat-icon svgIcon="github"></mat-icon>
+            <p>Github</p>
+        </div>
+    </div>
+</div>
+
+<div class="made-with-container">
+    <div class="made-with" (click)="openLink(githubLink)" (keyup.enter)="openLink(githubLink)" tabindex="0"
+        role="button" matTooltip="Repository">
+        <p class>
+            Portfolio made with
+        </p>
+        <mat-icon svgIcon="angular"></mat-icon>
+    </div>
+</div>
