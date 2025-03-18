@@ -15,7 +15,7 @@ export class AppComponent {
   title = 'portfolio';
 
   constructor(
-    private state: TransferState,
-    @Inject(PLATFORM_ID) private platformId: Object,
+    // private state: TransferState,
+    @Inject(PLATFORM_ID) private platformId: object,
   ) {}
 }

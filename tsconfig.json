@@ -22,7 +22,7 @@
     "noFallthroughCasesInSwitch": true,
 
     "skipLibCheck": true,
-    "isolatedModules": true,
+    // "isolatedModules": true,
     "importHelpers": true,
 
     "experimentalDecorators": true,

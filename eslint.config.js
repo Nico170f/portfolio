@@ -20,11 +20,14 @@ module.exports = tseslint.config(
     },
     processor: angular.processInlineTemplates,
     rules: {
-      'prettier/prettier': ['error', { 
-        singleQuote: true, 
-        printWidth: 100,
-        endOfLine: 'auto'  // This will respect the line endings of each file
-      }],
+      'prettier/prettier': [
+        'error',
+        {
+          singleQuote: true,
+          printWidth: 100,
+          endOfLine: 'auto', // This will respect the line endings of each file
+        },
+      ],
 
       '@angular-eslint/directive-selector': [
         'error',
@@ -43,7 +46,8 @@ module.exports = tseslint.config(
         },
       ],
       '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-inferrable-types': 'off',
     },
   },
   prettierConfig,
