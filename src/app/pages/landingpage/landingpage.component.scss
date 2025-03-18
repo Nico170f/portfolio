@@ -1,0 +1,21 @@
+#footer-section {
+  background-color: #202020 !important;
+  margin-top: -1px; /* Remove any gap between section and footer */
+  position: relative; /* Ensure proper stacking context */
+  display: block;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the landing page fill at least the viewport height */
+}
+
+app-section {
+  margin-bottom: 0; /* Remove bottom margin from sections */
+  display: block;
+}
+
+app-section:last-of-type {
+  margin-bottom: -1px; /* Ensure clean connection with footer */
+}
