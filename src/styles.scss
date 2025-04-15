@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+  font-family: 'Excluded';
+  src: url('assets/fonts/Excluded-z8XrX.ttf') format('truetype');
+}
+
 html,
 body {
   height: 100%;
+  background-color: #002234;
 }
 body {
   margin: 0;
