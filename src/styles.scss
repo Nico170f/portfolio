@@ -5,6 +5,11 @@
   src: url('assets/fonts/Excluded-z8XrX.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
 html,
 body {
   height: 100%;
@@ -13,4 +18,8 @@ body {
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+* {
+  font-family: Poppins;
 }
