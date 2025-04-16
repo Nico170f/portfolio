@@ -1,0 +1,116 @@
+.chip-ts {
+  @include mat.chips-overrides(
+    (
+      outline-color: #007acc,
+      label-text-color: #007acc,
+    )
+  );
+}
+
+.chip-mongodb {
+  @include mat.chips-overrides(
+    (
+      outline-color: #4db33d,
+      label-text-color: #4db33d,
+    )
+  );
+}
+
+.chip-electron {
+  @include mat.chips-overrides(
+    (
+      outline-color: #00d8fc,
+      label-text-color: #00d8fc,
+    )
+  );
+}
+
+.chip-express {
+  @include mat.chips-overrides(
+    (
+      outline-color: grey,
+      label-text-color: grey,
+    )
+  );
+}
+
+.chip-angular {
+  @include mat.chips-overrides(
+    (
+      outline-color: #b52e31,
+      label-text-color: #b52e31,
+    )
+  );
+}
+
+.chip-dynamodb {
+  @include mat.chips-overrides(
+    (
+      outline-color: #4d96d1,
+      label-text-color: #4d96d1,
+    )
+  );
+}
+
+.chip-kubernetes {
+  @include mat.chips-overrides(
+    (
+      outline-color: #326ce4,
+      label-text-color: #326ce4,
+    )
+  );
+}
+
+.chip-sqs {
+  @include mat.chips-overrides(
+    (
+      outline-color: #daa835,
+      label-text-color: #daa835,
+    )
+  );
+}
+
+.chip-sqs {
+  @include mat.chips-overrides(
+    (
+      outline-color: #daa835,
+      label-text-color: #daa835,
+    )
+  );
+}
+
+.chip-docker {
+  @include mat.chips-overrides(
+    (
+      outline-color: #1e96ed,
+      label-text-color: #1e96ed,
+    )
+  );
+}
+
+.chip-redis {
+  @include mat.chips-overrides(
+    (
+      outline-color: #d82c20,
+      label-text-color: #d82c20,
+    )
+  );
+}
+
+.chip-csharp {
+  @include mat.chips-overrides(
+    (
+      outline-color: #5a31ec,
+      label-text-color: #5a31ec,
+    )
+  );
+}
+
+.chip-mineflayer {
+  @include mat.chips-overrides(
+    (
+      outline-color: #60a490,
+      label-text-color: #60a490,
+    )
+  );
+}

@@ -6,7 +6,9 @@
         </div>
 
         <p class="description">
-            In April 2023, two friends and I launched a tech company called Valoks — just three friends driven by a
+            In April 2023, two friends and I launched a tech company called
+            <a href="https://valoks.com" target="_blank" class="span-text">Valoks</a>
+            — just three friends driven by a
             shared
             passion for building innovative software. I met Frej
             back in high school through a shared interest in coding, and Oliver and I go way back from online gaming.
@@ -15,7 +17,10 @@
             of
             people, with thousands using it daily. We love solving real problems and making solid solutions that people
             actually enjoy
-            using. By now, you're probably *screaming* to see what we've been working on - don’t worry, just scroll down
+            using. By now, you're probably <span style="font-style: italic;">screaming</span> to see what we've been
+            working
+            on -
+            don’t worry, just scroll down
             and
             check it
             out.
@@ -24,38 +29,81 @@
         <!-- <h1 class="projects-title">Recent <span class="light-bulb-effect">Projects</span></h1> -->
     </section>
 
-    stats from free client here
-
-    <section>
-        <div class="project-section">
-            @for (project of projects; track $index) {
-            <mat-card class="project-card" appearance="raised">
-                <mat-card-header>
-                    <img class="header-image" [src]="imagesPath + project.logoPath" alt="{{project.title}} Logo">
-                    <p>{{project.title}}</p>
-                    <!-- <div mat-card-avatar class=" afkcc-header">
+    <section class="mcc-stats-section">
+        @for (stat of stats; track $index) {
+        <div class="stat-card" #toolTip="matTooltip" matTooltipPosition="above" [matTooltip]="stat.toolTipText">
+            <div class="stat-value">{{ stat.value }}</div>
+            <div class="stat-info">
+                <mat-icon aria-hidden="false" [fontIcon]="stat.icon"></mat-icon>
+                <span>{{ stat.description }}</span>
             </div>
-            <mat-card-title>AFK Console Client</mat-card-title>
-            <mat-card-subtitle>The only Minecraft AFK'ing client you'll ever need</mat-card-subtitle> -->
-                </mat-card-header>
-                <mat-card-content>
-                    <p class="card-description">{{project.description}}</p>
-                </mat-card-content>
-                <mat-card-footer class="card-footer">
-                    <mat-chip-set aria-label="Project Technologies">
-                        @for(chip of project.chips; track $index) {
-                        <mat-chip class="chip-{{chip.tag}}">{{chip.name}}</mat-chip>
-                        }
-                    </mat-chip-set>
-                </mat-card-footer>
-            </mat-card>
-            }
         </div>
+        }
+
+        <p class="stats-note">The stats above are collected from our free software</p>
     </section>
 
-    valoks buttons here - website, youtube, github, linkedin
+    <section class="project-section">
+        @for (project of projects; track $index) {
 
+        <!-- 
+            #toolTip="matTooltip" matTooltipPosition="left"
+            [matTooltipDisabled]="!project.showToolTip" matTooltip="Click me to see more!" 
+            -->
 
+        <mat-card class="project-card" appearance="raised" #toolTip="matTooltip" matTooltipPosition="left"
+            [matTooltipDisabled]="!project.showToolTip" matTooltip="Click me to see more!">
+            <mat-card-header>
+                <img [src]="imagesPath + project.logoPath" alt="{{project.title}} Logo">
+                <p>{{project.title}}</p>
+            </mat-card-header>
+            <mat-card-content>
+                <p class="card-description">{{project.description}}</p>
+            </mat-card-content>
+            <mat-card-footer class="card-footer">
+                <mat-chip-set aria-label="Project Technologies">
+                    @for(chip of project.chips; track $index) {
+                    <mat-chip class="chip-{{chip.tag}}">{{chip.name}}</mat-chip>
+                    }
+                </mat-chip-set>
+            </mat-card-footer>
+        </mat-card>
+        }
+    </section>
+
+    <section class="media-section">
+        <div class="media-section-intro">
+            <h3>Interested in what we do?</h3>
+            <p>
+                If you're curious about our projects or want to connect with us, check out our official channels below.
+
+                If you have any questions, feedback, or just want to say hi, please do not hesitate to
+                reach out to us at <a class="span-text" href="mailto:contact@valoks.com">contact&#64;valoks.com</a>
+            </p>
+        </div>
+
+        <div class="media-buttons-container">
+            <a href="{{valoksWebsiteURL}}" target="_blank" class="media-button">
+                <mat-icon aria-hidden="false" fontIcon="language"></mat-icon>
+                <span class="button-label">Website</span>
+            </a>
+
+            <a href="{{valoksGithubURL}}" target="_blank" class="media-button">
+                <mat-icon aria-hidden="false" svgIcon="github"></mat-icon>
+                <span class="button-label">GitHub</span>
+            </a>
+
+            <a href="{{valoksLinkedInURL}}" target="_blank" class="media-button">
+                <mat-icon aria-hidden="false" fontIcon="business"></mat-icon>
+                <span class="button-label">LinkedIn</span>
+            </a>
+
+            <a href="{{mccYoutubeURL}}" target="_blank" class="media-button">
+                <mat-icon aria-hidden="false" fontIcon="smart_display"></mat-icon>
+                <span class="button-label">YouTube</span>
+            </a>
+        </div>
+    </section>
 
     <!-- <h1>Valoks - Solutions company</h1> -->
 </div>

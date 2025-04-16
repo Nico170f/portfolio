@@ -1,20 +1,16 @@
 @use '@angular/material' as mat;
 
 :host {
-  // Existing card overrides
   @include mat.card-overrides(
     (
       elevated-container-color: #002233,
     )
   );
 
-  // Add chips overrides
-  @include mat.chips-overrides(
+  @include mat.tooltip-overrides(
     (
-      //outline-color: #0066ff,
-      // Replace with your desired outline color
-      //disabled-outline-color: #808080,
-       // Replace with your disabled outline color
+      container-color: orange,
+      supporting-text-color: red,
     )
   );
 }
@@ -54,13 +50,143 @@
 
 .project-section {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   flex-direction: column;
+}
+
+.mcc-stats-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 800px;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .stats-note {
+    color: rgba(255, 255, 255, 0.5);
+    align-self: center;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: rgba(0, 34, 51, 0.5);
+  //padding: 1.5rem;
+  margin: 1.5rem;
+  border-radius: 8px;
+
+  width: calc(33% - 2rem); // Three stats per row by default
+  max-width: 160px;
+  //min-width: 180px;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  // First two cards are wider to create 2-3 layout
+  &:nth-child(1),
+  &:nth-child(2) {
+    width: calc(50% - 2rem);
+    max-width: 220px;
+  }
+
+  @media (max-width: 768px) {
+    width: calc(50% - 2rem);
+    max-width: 200px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: calc(50% - 2rem);
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: calc(100% - 3rem);
+    max-width: 300px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: calc(100% - 3rem);
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.5rem;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    // color: #0066ff;
+    margin-bottom: 0.5rem;
+
+    color: white; //mix(#fff, #e91e63, 85%);
+    font-weight: 900;
+    text-shadow:
+      -0.0075em 0.0075em 0 #002233,
+      0.005em 0.005em 0 #002233,
+      0.01em 0.01em 0 #002233,
+      0.015em 0.015em #002233,
+      0.02em 0.02em 0 #002233,
+      0.025em 0.025em 0 #002233,
+      0.03em 0.03em 0 #002233,
+      0.035em 0.035em 0 #002233;
+
+    @media (max-width: 450px) {
+      margin: 0;
+    }
+  }
+
+  .stat-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+
+    white-space: nowrap; // Prevent text wrapping
+    width: 100%;
+    justify-content: center;
+
+    mat-icon {
+      flex-shrink: 0; // Prevent icon from shrinking
+    }
+  }
 }
 
 .project-card {
   max-width: 800px;
   color: white !important;
+
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.6);
+  }
 
   .card-description {
     color: #808080 !important;
@@ -202,4 +328,88 @@
       label-text-color: #60a490,
     )
   );
+}
+
+// Add this after your existing styles
+.media-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    gap: 1rem;
+    margin-bottom: 8rem;
+  }
+
+  .media-section-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.8rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      // color: #acacac;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .media-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media (max-width: 600px) {
+      gap: 1rem;
+    }
+  }
+}
+
+.media-button {
+  background-color: rgba(0, 34, 51, 0.7);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 110px;
+  justify-content: center;
+
+  &:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 34, 51, 0.5);
+  }
+
+  mat-icon {
+    color: #0066ff;
+  }
+
+  .button-label {
+    font-weight: 500;
+  }
+}
+
+.span-text {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
 }
