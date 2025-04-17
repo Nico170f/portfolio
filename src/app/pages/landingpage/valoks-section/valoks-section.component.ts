@@ -5,46 +5,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { registerLocaleData } from '@angular/common';
 import localeDa from '@angular/common/locales/da';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {
+  ProjectComponent,
+  type ChipType,
+  type Project,
+  type TechChip,
+} from '@app/components/project/project.component';
 
 registerLocaleData(localeDa);
 
-interface Project {
-  title: string;
-  description: string;
-  logoPath: string;
-  chips: TechChip[];
-  showToolTip?: boolean;
-}
-
-type ChipType =
-  | 'ts'
-  | 'js'
-  | 'mongodb'
-  | 'express'
-  | 'angular'
-  | 'electron'
-  | 'dynamodb'
-  | 'kubernetes'
-  | 'sqs'
-  | 'docker'
-  | 'redis'
-  | 'csharp'
-  | 'mineflayer';
-
-interface TechChip {
-  tag: ChipType;
-  name: string;
-  // color: string;
-}
-
 @Component({
   selector: 'app-valoks-section',
-  imports: [MatCardModule, MatChipsModule, MatIconModule, MatTooltipModule],
+  imports: [MatCardModule, MatChipsModule, MatIconModule, MatTooltipModule, ProjectComponent],
   templateUrl: './valoks-section.component.html',
   styleUrl: './valoks-section.component.scss',
 })
 export class ValoksSectionComponent {
-  imagesPath = '../../../../assets/images/';
   valoksWebsiteURL = 'https://valoks.com';
   valoksGithubURL = 'https://github.com/valoks';
   valoksLinkedInURL = 'https://www.linkedin.com/company/valoks/';
