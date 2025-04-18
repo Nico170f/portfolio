@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+
+:host {
+  @include mat.card-overrides(
+    (
+      elevated-container-color: #002233,
+    )
+  );
+
+  // @include mat.tooltip-overrides(
+  //   (
+  //     container-color: orange,
+  //     supporting-text-color: red,
+  //   )
+  // );
+}
+
+.project-section {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}

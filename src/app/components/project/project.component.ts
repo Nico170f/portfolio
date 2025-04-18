@@ -8,7 +8,7 @@ export interface Project {
   title: string;
   description: string;
   logoPath: string;
-  chips: TechChip[];
+  chips: ChipType[];
   showToolTip?: boolean;
 }
 
@@ -42,6 +42,63 @@ export interface TechChip {
 export class ProjectComponent {
   //input project
   imagesPath = '../../../../assets/images/';
+
+  chips: Record<ChipType, TechChip> = {
+    ts: {
+      tag: 'ts',
+      name: 'TypeScript',
+      // color: '#007acc',
+    },
+    js: {
+      tag: 'js',
+      name: 'JavaScript',
+      // color: '#f0db4f',
+    },
+    mongodb: {
+      tag: 'mongodb',
+      name: 'MongoDB',
+    },
+    express: {
+      tag: 'express',
+      name: 'Express',
+    },
+    angular: {
+      tag: 'angular',
+      name: 'Angular',
+    },
+    electron: {
+      tag: 'electron',
+      name: 'Electron',
+    },
+    dynamodb: {
+      tag: 'dynamodb',
+      name: 'DynamoDB',
+    },
+    kubernetes: {
+      tag: 'kubernetes',
+      name: 'Kubernetes',
+    },
+    sqs: {
+      tag: 'sqs',
+      name: 'SQS',
+    },
+    docker: {
+      tag: 'docker',
+      name: 'Docker',
+    },
+    redis: {
+      tag: 'redis',
+      name: 'Redis',
+    },
+    csharp: {
+      tag: 'csharp',
+      name: 'C#',
+    },
+    mineflayer: {
+      tag: 'mineflayer',
+      name: 'Mineflayer',
+    },
+  };
 
   @Input() project!: Project;
 }
