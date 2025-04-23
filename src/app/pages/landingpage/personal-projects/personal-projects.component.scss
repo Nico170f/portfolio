@@ -3,7 +3,7 @@
 :host {
   @include mat.card-overrides(
     (
-      elevated-container-color: #002233,
+      elevated-container-color: #202020,
     )
   );
 
@@ -15,8 +15,34 @@
   // );
 }
 
+.container {
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .project-section {
   display: flex;
   gap: 2rem;
   flex-direction: column;
+}
+
+.section-title {
+  margin: 0;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+
+  align-self: center;
+}
+
+.description {
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  max-width: 800px;
+  // display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  margin-top: 0;
 }

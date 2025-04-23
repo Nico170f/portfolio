@@ -1,8 +1,25 @@
-<section class="project-section">
+<div class="container">
 
-    @for (project of projects; track $index) {
-    <app-project [project]="project"></app-project>
-    }
+    <section class="project-section">
+
+        <h1 class="section-title">Personal projects</h1>
 
 
-</section>
+        <p class="description">
+            Although I haven't done a ton of personal projects, I do have a few you might find interesting. Just a
+            heads-up — the
+            code in these is from my early days of programming, so maybe don’t look too closely. Continue at your own
+            risk... :)
+        </p>
+
+
+        @for (project of projects; track $index) {
+        <app-project [project]="project"></app-project>
+        }
+
+
+        My buttons here
+
+
+    </section>
+</div>

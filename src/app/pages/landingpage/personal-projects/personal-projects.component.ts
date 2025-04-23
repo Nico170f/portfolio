@@ -10,10 +10,17 @@ import { ProjectComponent, type Project } from '@app/components/project/project.
 export class PersonalProjectsComponent {
   projects: Project[] = [
     {
-      title: 'dddddd',
-      description: `ddddddd.`,
-      logoPath: `acc-free.svg`,
-      chips: ['ts', 'mongodb', 'express', 'angular', 'electron', 'csharp', 'mineflayer'],
+      title: 'SkullWars Discord Bot',
+      description: ``,
+      logoPath: `111.svg`,
+      chips: ['js', 'mongodb', 'mysql'],
+      showToolTip: true,
+    },
+    {
+      title: 'SkullWars Plugin',
+      description: ``,
+      logoPath: `111.svg`,
+      chips: ['java', 'mysql'],
       showToolTip: true,
     },
   ];

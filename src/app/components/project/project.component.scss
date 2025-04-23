@@ -36,11 +36,29 @@
   }
 }
 
+.chip {
+  @include mat.chips-overrides(
+    (
+      label-text-weight: bolder,
+      //todo: not working
+    )
+  );
+}
+
 .chip-ts {
   @include mat.chips-overrides(
     (
       outline-color: #007acc,
       label-text-color: #007acc,
+    )
+  );
+}
+
+.chip-js {
+  @include mat.chips-overrides(
+    (
+      outline-color: #f7df1e,
+      label-text-color: #f7df1e,
     )
   );
 }
@@ -149,6 +167,23 @@
     (
       outline-color: #60a490,
       label-text-color: #60a490,
+    )
+  );
+}
+
+.chip-mysql {
+  @include mat.chips-overrides(
+    (
+      outline-color: #4479a0,
+      label-text-color: #4479a0,
+    )
+  );
+}
+.chip-java {
+  @include mat.chips-overrides(
+    (
+      outline-color: #ec2125,
+      label-text-color: #ec2125,
     )
   );
 }
