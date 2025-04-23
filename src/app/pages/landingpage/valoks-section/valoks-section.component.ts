@@ -29,9 +29,8 @@ export class ValoksSectionComponent {
   projects: Project[] = [
     {
       title: 'AFK Console Client',
-      description: `The AFK Console Client is a free, widely-used tool with over 5.000 users and
-                90.000+ launches. Seamlessly connect tons
-                of accounts while using significantly less resources.`,
+      description: `Imagine you want to run multiple instances of Minecraft on your computer, but you're worried about your PC's resources. Fear not! Seamlessly connect tons
+                of Minecraft accounts while using significantly less resources.`,
       logoPath: `acc-free.svg`,
       chips: ['ts', 'mongodb', 'express', 'angular', 'electron', 'csharp', 'mineflayer'],
       showToolTip: true,
@@ -39,7 +38,8 @@ export class ValoksSectionComponent {
     },
     {
       title: 'Web Console Client',
-      description: `This is sample text for the Web Console Client. It is a free, widely-used tool with over 5.000 users and`,
+      description: `Want your Minecraft accounts online 24/7 to keep earning in-game currency even while you sleep—but don’t want to leave your computer running all the time?
+            No problem! With our web console client, you can run your Minecraft accounts in the cloud and control them from anywhere using any device with a web browser.`,
       logoPath: `temp.svg`,
       chips: ['ts', 'express', 'dynamodb', 'kubernetes', 'sqs', 'docker', 'redis'],
       showToolTip: true,

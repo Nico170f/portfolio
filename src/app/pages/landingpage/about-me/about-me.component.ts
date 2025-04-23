@@ -60,4 +60,15 @@ export class AboutMeComponent {
       path: 'postgresql.svg',
     },
   ];
+
+  getYearsSince(): number {
+    const date = new Date('2003-04-21');
+    const currentDate = new Date();
+    const years = currentDate.getFullYear() - date.getFullYear();
+    const months = currentDate.getMonth() - date.getMonth();
+    if (months < 0 || (months === 0 && currentDate.getDate() < date.getDate())) {
+      return years - 1;
+    }
+    return years;
+  }
 }
