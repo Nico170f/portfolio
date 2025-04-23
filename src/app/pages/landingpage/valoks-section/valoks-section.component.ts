@@ -35,6 +35,7 @@ export class ValoksSectionComponent {
       logoPath: `acc-free.svg`,
       chips: ['ts', 'mongodb', 'express', 'angular', 'electron', 'csharp', 'mineflayer'],
       showToolTip: true,
+      projectLink: 'https://minecraftafk.com/free',
     },
     {
       title: 'Web Console Client',
@@ -42,6 +43,7 @@ export class ValoksSectionComponent {
       logoPath: `temp.svg`,
       chips: ['ts', 'express', 'dynamodb', 'kubernetes', 'sqs', 'docker', 'redis'],
       showToolTip: true,
+      projectLink: 'https://minecraftafk.com',
     },
     {
       title: 'Coming soon...?',

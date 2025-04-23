@@ -1,25 +1,43 @@
 <div class="container">
 
     <section class="project-section">
-
         <h1 class="section-title">Personal projects</h1>
-
 
         <p class="description">
             Although I haven't done a ton of personal projects, I do have a few you might find interesting. Just a
-            heads-up — the
-            code in these is from my early days of programming, so maybe don’t look too closely. Continue at your own
-            risk... :)
+            heads-up — some of the
+            code in these projects is from my early days of programming, so maybe don’t look too closely. :)
         </p>
 
 
         @for (project of projects; track $index) {
         <app-project [project]="project"></app-project>
         }
+    </section>
 
+    <section class="media-section">
+        <div class="media-section-intro">
+            <h3>Thank you for visiting!</h3>
 
-        My buttons here
+            <p>
+                Thank you for taking the time to explore my portfolio!
+                If you're curious about what I do or want to
+                connect with me, check out the links below or reach out
+                via my email <a class="span-text"
+                    href="mailto:nico.steenhansen@gmail.com">nico.steenhansen&#64;gmail.com</a>
+            </p>
+        </div>
 
+        <div class="media-buttons-container">
+            <a href="{{githubLink}}" target="_blank" class="media-button">
+                <mat-icon aria-hidden="false" svgIcon="github"></mat-icon>
+                <span class="button-label">Github</span>
+            </a>
 
+            <a href="{{linkedInLink}}" target="_blank" class="media-button">
+                <mat-icon aria-hidden="false" fontIcon="business"></mat-icon>
+                <span class="button-label">LinkedIn</span>
+            </a>
+        </div>
     </section>
 </div>
