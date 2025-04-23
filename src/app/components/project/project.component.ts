@@ -3,6 +3,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { Router } from '@angular/router';
 
 export interface Project {
   title: string;
@@ -10,6 +12,7 @@ export interface Project {
   logoPath: string;
   chips: ChipType[];
   showToolTip?: boolean;
+  projectLink?: string;
 }
 
 export type ChipType =
@@ -42,6 +45,12 @@ export interface TechChip {
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
+  private router: Router;
+
+  constructor(router: Router) {
+    this.router = router;
+  }
+
   //input project
   imagesPath = '../../../../assets/images/';
 
@@ -111,4 +120,9 @@ export class ProjectComponent {
   };
 
   @Input() project!: Project;
+
+  openProject() {
+    if (this.project.projectLink == undefined) return;
+    window.open(this.project.projectLink, '_blank');
+  }
 }

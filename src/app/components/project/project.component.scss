@@ -1,5 +1,9 @@
 @use '@angular/material' as mat;
 
+.clickable {
+  cursor: pointer;
+}
+
 .project-card {
   max-width: 800px;
   color: white !important;

@@ -1,7 +1,8 @@
-<mat-card class="project-card" appearance="raised" #toolTip="matTooltip" matTooltipPosition="left"
-    [matTooltipDisabled]="!project.showToolTip" matTooltip="Click me to see more!">
+<mat-card class="project-card {{project.showToolTip ? 'clickable' : ''}}" appearance="raised" #toolTip="matTooltip"
+    matTooltipPosition="left" [matTooltipDisabled]="!project.showToolTip" matTooltip="Click me to see more!"
+    (click)="openProject()">
     <mat-card-header>
-        <img [src]="imagesPath + project.logoPath" alt="{{project.title}} Logo">
+        <img [src]=" imagesPath + project.logoPath" alt="{{project.title}} Logo">
         <p>{{project.title}}</p>
     </mat-card-header>
     <mat-card-content>
