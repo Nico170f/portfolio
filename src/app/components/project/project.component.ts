@@ -25,7 +25,9 @@ export type ChipType =
   | 'docker'
   | 'redis'
   | 'csharp'
-  | 'mineflayer';
+  | 'mineflayer'
+  | 'mysql'
+  | 'java';
 
 export interface TechChip {
   tag: ChipType;
@@ -97,6 +99,14 @@ export class ProjectComponent {
     mineflayer: {
       tag: 'mineflayer',
       name: 'Mineflayer',
+    },
+    mysql: {
+      tag: 'mysql',
+      name: 'MySQL',
+    },
+    java: {
+      tag: 'java',
+      name: 'Java',
     },
   };
 
