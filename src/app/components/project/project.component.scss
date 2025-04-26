@@ -8,6 +8,8 @@
   max-width: 800px;
   color: white !important;
 
+  touch-action: pan-y;
+
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease;
 

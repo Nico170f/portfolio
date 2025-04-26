@@ -1,3 +1,4 @@
+import type { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -12,7 +13,7 @@ interface Icon {
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit {
   iconPath = '../../../../assets/icons/';
   icons: Icon[] = [
     {
@@ -61,6 +62,8 @@ export class AboutMeComponent {
     },
   ];
 
+  isMobile = false;
+
   getYearsSince(): number {
     const date = new Date('2003-04-21');
     const currentDate = new Date();
@@ -70,5 +73,11 @@ export class AboutMeComponent {
       return years - 1;
     }
     return years;
+  }
+
+  ngOnInit() {
+    this.isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
   }
 }

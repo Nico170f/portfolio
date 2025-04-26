@@ -25,7 +25,7 @@
     <section class="icon-section">
         @for (icon of icons; track $index) {
         <img [src]="iconPath + icon.path" [alt]="icon.toolTip + 'icon '" class="icon" matTooltipPosition="above"
-            [matTooltip]="icon.toolTip" />
+            [matTooltip]="icon.toolTip" [matTooltipDisabled]="isMobile" />
         }
     </section>
 </div>

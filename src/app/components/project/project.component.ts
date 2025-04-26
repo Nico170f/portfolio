@@ -1,3 +1,4 @@
+import type { OnInit } from '@angular/core';
 import { Component, Inject, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
@@ -44,8 +45,12 @@ export interface TechChip {
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss',
 })
-export class ProjectComponent {
+export class ProjectComponent implements OnInit {
   private router: Router;
+
+  touchStartY = 0;
+
+  isMobile = false;
 
   constructor(router: Router) {
     this.router = router;
@@ -119,7 +124,24 @@ export class ProjectComponent {
     },
   };
 
+  ngOnInit() {
+    this.isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
+  }
+
   @Input() project!: Project;
+
+  onTouchStart(event: TouchEvent) {
+    this.touchStartY = event.touches[0].clientY;
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    const touchEndY = event.changedTouches[0].clientY;
+    if (Math.abs(touchEndY - this.touchStartY) < 10) {
+      this.openProject();
+    }
+  }
 
   openProject() {
     if (this.project.projectLink == undefined) return;

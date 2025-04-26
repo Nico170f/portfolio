@@ -1,3 +1,4 @@
+import type { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
@@ -20,11 +21,13 @@ registerLocaleData(localeDa);
   templateUrl: './valoks-section.component.html',
   styleUrl: './valoks-section.component.scss',
 })
-export class ValoksSectionComponent {
+export class ValoksSectionComponent implements OnInit {
   valoksWebsiteURL = 'https://valoks.com';
   valoksGithubURL = 'https://github.com/valoks';
   valoksLinkedInURL = 'https://www.linkedin.com/company/valoks/';
   mccYoutubeURL = 'https://www.youtube.com/@mccvaloks';
+
+  isMobile = false;
 
   projects: Project[] = [
     {
@@ -85,4 +88,10 @@ export class ValoksSectionComponent {
       toolTipText: 'Total number of Discord members in our server',
     },
   ];
+
+  ngOnInit() {
+    this.isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
+  }
 }
