@@ -12,6 +12,8 @@ import {
   type Project,
   type TechChip,
 } from '@app/components/project/project.component';
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { StatData, StatsSignalrService } from '@app/services/stats-signalr.service';
 
 registerLocaleData(localeDa);
 
@@ -89,9 +91,18 @@ export class ValoksSectionComponent implements OnInit {
     },
   ];
 
+  constructor(private statsService: StatsSignalrService) {}
+
   ngOnInit() {
     this.isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent,
     );
+
+    this.statsService.stats$.subscribe((data: StatData) => {
+      if (data) {
+        // this.stats = data;
+        console.log('Stats updated:', data);
+      }
+    });
   }
 }
