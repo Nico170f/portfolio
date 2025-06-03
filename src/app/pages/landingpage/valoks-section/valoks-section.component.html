@@ -34,7 +34,7 @@
         @for (stat of stats; track $index) {
         <div class="stat-card" #toolTip="matTooltip" matTooltipPosition="above" [matTooltip]="stat.toolTipText"
             [matTooltipDisabled]="isMobile">
-            <div class="stat-value">{{ stat.value }}</div>
+            <div class="stat-value">{{ stat.value() }}</div>
             <div class="stat-info">
                 <mat-icon aria-hidden="false" [fontIcon]="stat.icon"></mat-icon>
                 <span>{{ stat.description }}</span>

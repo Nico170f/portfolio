@@ -4,8 +4,8 @@ import * as signalR from '@microsoft/signalr';
 import { BehaviorSubject } from 'rxjs';
 
 export interface StatData {
-  UpdateType: 'BotsConnected' | 'UniqueUsers' | 'AppLaunches' | 'UniqueServers' | 'DiscordMembers';
-  Value: number;
+  updateType: 'BotsConnected' | 'UniqueUsers' | 'AppLaunches' | 'UniqueServers' | 'DiscordMembers';
+  value: number;
 }
 
 @Injectable({
@@ -18,8 +18,9 @@ export class StatsSignalrService {
 
   constructor() {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://localhost:5172/stats', {
-        withCredentials: true,
+      // .withUrl('http://localhost:5172/stats/live', {
+      .withUrl('https://free.minecraftafk.com/stats/live', {
+        withCredentials: false,
       }) // Use your actual SignalR hub endpoint
       .withAutomaticReconnect()
       .build();
