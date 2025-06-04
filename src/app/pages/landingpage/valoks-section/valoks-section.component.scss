@@ -76,6 +76,7 @@
     align-self: center;
     text-align: center;
     margin: 0;
+    max-width: 500px;
   }
 }
 
@@ -83,18 +84,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: rgba(0, 34, 51, 0.5);
-  //padding: 1.5rem;
   margin: 1.5rem;
   border-radius: 8px;
 
-  width: calc(33% - 2rem); // Three stats per row by default
+  width: calc(33% - 2rem);
   max-width: 160px;
-  //min-width: 180px;
   text-align: center;
   transition: transform 0.3s ease;
 
-  // First two cards are wider to create 2-3 layout
   &:nth-child(1),
   &:nth-child(2) {
     width: calc(50% - 2rem);
@@ -141,7 +138,6 @@
   .stat-value {
     font-size: 2.5rem;
     font-weight: bold;
-    // color: #0066ff;
     margin-bottom: 0.5rem;
 
     color: white; //mix(#fff, #e91e63, 85%);
@@ -167,12 +163,12 @@
     gap: 0.5rem;
     color: #ffffff;
 
-    white-space: nowrap; // Prevent text wrapping
+    white-space: nowrap;
     width: 100%;
     justify-content: center;
 
     mat-icon {
-      flex-shrink: 0; // Prevent icon from shrinking
+      flex-shrink: 0;
     }
   }
 }
@@ -205,7 +201,6 @@
     }
 
     p {
-      // color: #acacac;
       line-height: 1.6;
       max-width: 600px;
       margin: 0 auto;
@@ -258,4 +253,90 @@
   text-decoration: none;
   color: white;
   font-weight: 900;
+}
+
+.stats-note-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+
+  .stats-note-wrapper {
+    display: inline-flex;
+    align-items: center;
+    max-width: 475px;
+
+    @media (max-width: 450px) {
+      max-width: 300px;
+      flex-direction: column;
+    }
+  }
+
+  .stats-note {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+
+  .circle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin-right: 20px;
+    flex-shrink: 0;
+
+    @media (max-width: 450px) {
+      margin-right: 0px;
+      margin-bottom: 10px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 250%;
+      height: 250%;
+      box-sizing: border-box;
+      margin-left: -75%;
+      margin-top: -75%;
+      border-radius: 45px;
+      background-color: #75daad;
+      animation: pulse 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #75daad;
+      border-radius: 50px;
+      animation: circle 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.33);
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
 }

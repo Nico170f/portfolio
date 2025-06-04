@@ -34,7 +34,13 @@
         @for (stat of stats; track $index) {
         <div class="stat-card" #toolTip="matTooltip" matTooltipPosition="above" [matTooltip]="stat.toolTipText"
             [matTooltipDisabled]="isMobile">
-            <div class="stat-value">{{ stat.value() }}</div>
+            <!-- This is a poor way of doing this - fix later :) -->
+            <div class="stat-value" [id]="$index === 0 ? 'botsConnectedStat' : 
+                                           $index === 1 ? 'uniqueUsersStat' :
+                                           $index === 2 ? 'appLaunchesStat' :
+                                           $index === 3 ? 'uniqueServersStat' : 'discordMembersStat'">
+                {{ stat.value() | number:'1.0-0':'da-DK' }}
+            </div>
             <div class="stat-info">
                 <mat-icon aria-hidden="false" [fontIcon]="stat.icon"></mat-icon>
                 <span>{{ stat.description }}</span>
@@ -42,12 +48,25 @@
         </div>
         }
 
-        <p class="stats-note">The stats above are collected from our free software</p>
+        <!-- <div class="stats-note-container">
+            <div class="circle"></div>
+            <p class="stats-note">The stats above are collected from our free software and are updated in real time
+                using SignalR.</p>
+        </div> -->
+
+        <div class="stats-note-container">
+            <div class="stats-note-wrapper">
+                <div class="circle"></div>
+                <p class="stats-note">The stats above are collected from our free software and are
+                    updated in real time usingSignalR.</p>
+            </div>
+        </div>
     </section>
+
+
 
     <section class="project-section">
         @for (project of projects; track $index) {
-
         <!-- 
             #toolTip="matTooltip" matTooltipPosition="left"
             [matTooltipDisabled]="!project.showToolTip" matTooltip="Click me to see more!" 
