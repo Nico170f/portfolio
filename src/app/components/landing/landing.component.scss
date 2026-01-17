@@ -1,7 +1,4 @@
 
-
-
-
 #container {
     background-color: #202020;
     width: 100%;
@@ -197,12 +194,15 @@
             padding: 2px 7px 2px 7px;
             border-radius: 10px;
             font-size: 16px;
+            font-weight: 550;
+            font-family: Mona;
             margin-right: 5px;
             background-color: grey;
         }
 
         .Typescript {
-            background-color: #007acc;
+            // background-color: #007acc;
+            background-color: #0066FF;
         }
 
         .JavaScript {
@@ -378,4 +378,59 @@
 
 
 
+}
+
+
+
+
+.hoverText {
+  transition:
+    0.35s font-weight,
+    0.35s color;
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  font-size: 22px;
+  color: rgb(238, 242, 255);
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(199, 210, 254);
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 300;
+  font-size: 18px;
+  color: rgb(199, 210, 254, 0.8);
+}
+
+.hoverText:hover + .hoverText + .hoverText + .hoverText {
+  font-weight: 300;
+  font-size: 16px;
+  color: rgb(199, 210, 254, 0.6);
+}
+
+
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(199, 210, 254);
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 300;
+  font-size: 18px;
+  color: rgb(199, 210, 254, 0.8);
+}
+
+.hoverText:has(+ .hoverText + .hoverText + .hoverText:hover) {
+  font-weight: 300;
+  font-size: 18px;
+  color: rgb(199, 210, 254, 0.6);
 }

@@ -1,7 +1,6 @@
+<!--
 <mat-drawer-container id="container" [hasBackdrop]="false">
-
     <app-back></app-back>
-
 
     <h1 class="title">AFK Console Client</h1>
 
@@ -16,7 +15,73 @@
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
     </div>
-
-
-
 </mat-drawer-container>
+-->
+
+<div id="container">
+    <div class="background bg-one">
+        <h1 class="title">AFK Console Client</h1>
+        <div class="project-description">
+            <app-bubble-text [inputText]="projectDescription"></app-bubble-text>
+        </div>
+
+        <div class="display-section">
+            <app-hover-image image="../../../assets/acc-logo2.svg"></app-hover-image>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quo reiciendis, magni quibusdam sequi
+                adipisci at laborum eos necessitatibus consequuntur incidunt atque vitae quae quos explicabo quaerat
+                totam sunt aut?</p>
+        </div>
+
+        <app-scroller class="scroll-animation"></app-scroller>
+    </div>
+
+    <div class="background bg-two">
+
+        <div class="stats-section">
+            <h1 class="section-title">
+                <!--<mat-icon>auto_graph</mat-icon>-->
+                Statistics
+            </h1>
+            <div class="cards">
+                <div *ngFor="let stat of stats" class="stat-card">
+                    <div class="stat-title">
+                        <mat-icon>{{stat.icon}}</mat-icon>
+                        <div>
+                            <div>
+                                {{stat.amount}}
+                            </div>
+                            <div class="second-title">
+                                {{stat.title}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-description">{{stat.description}}</div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="section-title">Info</h1>
+        <div class="info-section">
+
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/A-sowP8kfHg?si=Fzv9kcfeSFpsi6AM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+            <iframe src="https://discord.com/widget?id=1001858472234725396&theme=dark" allowtransparency="true"
+                frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+        </div>
+
+    </div>
+
+
+    <div class="background bg-three"></div>
+
+</div>
+
+
+<app-navigation-footer></app-navigation-footer>

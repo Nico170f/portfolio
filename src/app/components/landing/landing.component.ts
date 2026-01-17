@@ -120,6 +120,14 @@ export class LandingComponent {
   projects = projects;
   user_image = '../../../assets/selfie.jpg';
 
+
+  bio1 = `Hello! I'm a 20-year-old aspiring software engineer from Denmark. My journey into the world of
+          programming began in 2018, fueled by a passion for technology and the need for a new Minecraft
+          plugin. I will commence my Software Engineering studies at`;
+
+  bio2 = `in September 2024, but until then, I am self-taught, continuously honing my skills and knowledge in the world of programming. My
+          primary focus is backend development, but I also delve into full-stack projects from time to time.`;
+
   openLink(text: string) {
     window.open(text, '_blank');
   }
@@ -136,7 +144,7 @@ export class LandingComponent {
 
   navigateTo(url: string[]): void {
     this.router.navigate(url);
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }
 
   // ! setImage() {

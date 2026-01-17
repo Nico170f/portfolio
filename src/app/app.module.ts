@@ -16,10 +16,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
+import { FooterComponent } from './components/shared/landing-footer/footer.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { AfkccComponent } from './components/projects/afkcc/afkcc.component';
 import { BackComponent } from './components/shared/back/back.component';
+import { ScrollerComponent } from './components/shared/scroller/scroller.component';
+import { BubbleTextComponent } from './components/shared/effects/bubble-text/bubble-text.component';
+import { NavigationFooterComponent } from './components/shared/navigation-footer/navigation-footer.component';
+import { HoverImageComponent } from './components/shared/effects/hover-image/hover-image.component';
+import { ImageSliderComponent } from './components/shared/image-slider/image-slider.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { BackComponent } from './components/shared/back/back.component';
     FooterComponent,
     LandingComponent,
     AfkccComponent,
-    BackComponent
+    BackComponent,
+    ScrollerComponent,
+    BubbleTextComponent,
+    NavigationFooterComponent,
+    HoverImageComponent,
+    ImageSliderComponent
   ],
   imports: [
     BrowserModule,
