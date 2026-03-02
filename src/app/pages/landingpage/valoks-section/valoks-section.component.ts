@@ -66,7 +66,7 @@ export class ValoksSectionComponent implements OnInit, OnDestroy {
     },
     {
       title: 'Web Console Client',
-      description: `Want your Minecraft accounts online 24/7 to keep earning in-game currency even while you sleep—but don’t want to leave your computer running all the time?
+      description: `Want your Minecraft accounts online 24/7 to keep earning in-game currency even while you sleep - but don’t want to leave your computer running all the time?
             No problem! With our web console client, you can run your Minecraft accounts in the cloud and control them from anywhere using any device with a web browser.`,
       logoPath: `temp.svg`,
       chips: ['ts', 'express', 'dynamodb', 'kubernetes', 'sqs', 'docker', 'redis'],
